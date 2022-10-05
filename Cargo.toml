@@ -1,27 +1,26 @@
 [package]
 name = "firestore-db-and-auth"
 version = "0.6.1"
-authors = ["David Gräff <david.graeff@web.de>"]
+authors = ["David Gräff <david.graeff@web.de>", "J j MATILLA <javierjmatilla@gmail.com>"]
 edition = "2018"
 license = "MIT"
 description = "This crate allows easy access to your Google Firestore DB via service account or OAuth impersonated Google Firebase Auth credentials."
 readme = "readme.md"
 keywords = ["firestore", "auth"]
 categories = ["api-bindings","authentication"]
-maintenance = { status = "passively-maintained" }
 repository = "https://github.com/davidgraeff/firestore-db-and-auth-rs"
 
 [dependencies]
-reqwest = { version = "0.11", default-features = false, features = ["json", "blocking"] }
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-chrono = { version = "0.4", features = ["serde"] }
-biscuit = "0.5"
-ring = "0.16"
-base64 = "0.13"
+reqwest = { version = "0.11.12", default-features = false, features = ["json", "blocking"] }
+serde = { version = "1.0.145", features = ["derive"] }
+serde_json = "1.0.85"
+chrono = { version = "0.4.22", features = ["serde"] }
+biscuit = "0.5.0"
+ring = "0.16.20"
+base64 = "0.13.0"
 
 [dependencies.rocket]
-version = "0.4.6"
+version = "0.4.11"
 default-features = false
 optional = true
 
