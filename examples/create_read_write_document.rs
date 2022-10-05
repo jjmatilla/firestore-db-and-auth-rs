@@ -212,7 +212,8 @@ fn valid_test_credentials() -> errors::Result<Credentials> {
     let mut jwks_path = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     jwks_path.push("firebase-service-account.jwks");
 
-    let mut cred: Credentials = Credentials::new(include_str!("../firebase-service-account.json"))?;
+    //TODO: CHANGE THIS FOR SYSTEM PATHS
+    let mut cred: Credentials = Credentials::new(include_str!("..\\firebase-service-account.json"))?;
 
     // Only download the public keys once, and cache them.
     let jwkset = utils::from_cache_file(jwks_path.as_path(), &cred)?;
